@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistem Penjualan | Tambah Karyawan</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <h1>Sistem Informasi Penjualan</h1>
+        <p>Manajemen Data Karyawan</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="../index.html">Beranda</a>
+        <a href="../Barang/list.html">Data Barang</a>
+        <a href="../Barang/tambah.html">Tambah Barang</a>
+        <a href="list.html">Data Karyawan</a>
+        <a href="tambah.html">Tambah Karyawan</a>
+    </nav>
+
+    <main>
+        <div class="card">
+            <div class="card-title">Formulir Tambah Karyawan</div>
+            
+            <form action="list.html">
+                <div class="form-group">
+                    <label for="id_karyawan">ID Karyawan:</label>
+                    <input type="text" id="id_karyawan" name="id_karyawan" placeholder="Contoh: KRY003" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama_lengkap">Nama Lengkap:</label>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div class="form-group">
+                    <label for="posisi">Posisi / Jabatan:</label>
+                    <input type="text" id="posisi" name="posisi" placeholder="Contoh: Supervisor">
+                </div>
+                <div class="form-group">
+                    <label for="no_wa">No. Telepon / WhatsApp:</label>
+                    <input type="text" id="no_wa" name="no_wa" placeholder="Contoh: 08123456789">
+                </div>
+                <div class="form-group">
+                    <label for="alamat">Alamat Lengkap:</label>
+                    <textarea id="alamat" name="alamat" placeholder="Masukkan alamat karyawan"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Simpan Data</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='list_2.html'">Batal</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistem Informasi Penjualan &mdash; Jobsheet 1</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistem Penjualan | Tambah Barang</title>
+    <link rel="stylesheet" href="../asset/css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <h1>Sistem Informasi Penjualan</h1>
+        <p>Manajemen Data Barang & Produk</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="../index.html">Beranda</a>
+        <a href="list.html">Data Barang</a>
+        <a href="tambah.html">Tambah Barang</a>
+        <a href="../karyawan/list.html">Data Karyawan</a>
+        <a href="../karyawan/tambah.html">Tambah Karyawan</a>
+    </nav>
+
+    <main>
+        <div class="card">
+            <div class="card-title">Tambah Data Barang Baru</div>
+            
+            <form action="list.html">
+                <div class="form-group">
+                    <label for="kode_barang">Kode Barang</label>
+                    <input type="text" id="kode_barang" name="kode_barang" placeholder="Contoh: BRG-004" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama_barang">Nama Barang</label>
+                    <input type="text" id="nama_barang" name="nama_barang" required>
+                </div>
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori">
+                        <option value="Elektronik">Elektronik</option>
+                        <option value="Aksesoris">Aksesoris</option>
+                        <option value="ATK">Alat Tulis Kantor (ATK)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="harga">Harga (Rp)</label>
+                    <input type="number" id="harga" name="harga" min="0" placeholder="Contoh: 150000" required>
+                </div>
+                <div class="form-group">
+                    <label for="stok">Stok Awal</label>
+                    <input type="number" id="stok" name="stok" min="0" value="0" required>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Simpan Barang</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='list.html'">Batal</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistem Informasi Penjualan &mdash; Jobsheet 1</p>
+    </footer>
+</body>
+</html>
