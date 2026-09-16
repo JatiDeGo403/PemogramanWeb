@@ -16,7 +16,7 @@ body {
 
 /* ===== Bagian Atas (Header) - Warna Orange ===== */
 .top-header {
-    background-color: #FF8C00; 
+    background-color: #FF8C00; /* Orange */
     color: #ffffff;
     text-align: center;
     padding: 2rem 1rem;
@@ -34,7 +34,7 @@ body {
 
 /* ===== Bagian Tengah (Navbar) - Warna Kuning Keoranyean ===== */
 .navbar {
-    background-color: #FFB300; 
+    background-color: #FFB300; /* Kuning agak ke oranye an */
     display: flex;
     justify-content: center;
     padding: 1rem;
@@ -74,7 +74,8 @@ main {
     color: #000;
     padding-bottom: 0.8rem;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #1a2332; /* Garis tebal gelap seperti di gambar */
+    /* DIBERBAIKI: Garis bawah judul menjadi oranye */
+    border-bottom: 2px solid #FF8C00; 
 }
 
 /* ===== Tabel ===== */
@@ -94,7 +95,8 @@ th, td {
 }
 
 th {
-    background-color: #202b3c;
+    /* DIPERBAIKI: Header tabel menjadi oranye (tadinya gelap) */
+    background-color: #FF8C00;
     color: #ffffff;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -105,7 +107,7 @@ td {
     font-size: 0.95rem;
 }
 
-/* ===== Form (Sesuai Gambar) ===== */
+/* ===== Form ===== */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -117,12 +119,13 @@ td {
     color: #333;
 }
 
-/* Input dan Textarea dibuat memanjang sesuai gambar */
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #4f81bd; /* Warna border biru muda seperti di gambar */
+    /* Border input dibuat oranye lembut saat normal */
+    border: 1px solid #f8b46a; 
     border-radius: 6px;
     font-size: 0.95rem;
     color: #555;
@@ -130,10 +133,12 @@ td {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
-    border-color: #2b579a;
-    box-shadow: 0 0 0 2px rgba(43, 87, 154, 0.1);
+    /* Border input menjadi oranye tegas saat diklik */
+    border-color: #FF8C00; 
+    box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.2);
 }
 
 .form-group textarea {
@@ -141,7 +146,7 @@ td {
     min-height: 100px;
 }
 
-/* ===== Tombol (Sesuai Gambar) ===== */
+/* ===== Tombol ===== */
 .button-group {
     display: flex;
     gap: 0.5rem;
@@ -159,15 +164,16 @@ td {
 }
 
 .btn-primary {
-    background-color: #0284c7; /* Biru terang seperti di gambar */
+    /* Tombol simpan dibuat seirama dengan tema (Oranye Pekat) */
+    background-color: #FF8C00; 
 }
 
 .btn-primary:hover {
-    background-color: #0369a1;
+    background-color: #d35400; /* Oranye gelap saat di-hover */
 }
 
 .btn-secondary {
-    background-color: #6b7280; /* Abu-abu seperti di gambar */
+    background-color: #6b7280; 
 }
 
 .btn-secondary:hover {
@@ -176,23 +182,16 @@ td {
 
 /* ===== Footer ===== */
 footer {
-    background-color: #202b3c;
-    color: #9ca3af;
+    /* DIPERBAIKI: Footer menjadi oranye (tadinya gelap) */
+    background-color: #FF8C00; 
+    color: #ffffff; /* Teks footer menjadi putih agar kontras */
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
     margin-top: 3rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-}
-
-/* ===== Dashboard Stats (Tambahan Baru) ===== */
+/* ===== Dashboard Stats ===== */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -201,9 +200,10 @@ footer {
 }
 
 .stat-card {
-    background-color: #fafbfc; /* Latar belakang sangat terang */
-    border: 1px solid #e5e7eb; /* Border abu-abu tipis keliling */
-    border-left: 4px solid #0284c7; /* Border kiri biru tebal sesuai gambar */
+    background-color: #fafbfc; 
+    border: 1px solid #e5e7eb; 
+    /* DIPERBAIKI: Garis kiri pada card dashboard menjadi oranye */
+    border-left: 4px solid #FF8C00; 
     border-radius: 4px;
     padding: 1.5rem;
     box-shadow: 0 1px 2px rgba(0,0,0,0.02);
@@ -211,7 +211,8 @@ footer {
 
 .stat-card h3 {
     font-size: 0.85rem;
-    color: #1e3a8a; /* Biru gelap untuk judul stat */
+    /* DIPERBAIKI: Warna teks judul statistik menjadi oranye pekat */
+    color: #d35400; 
     margin-bottom: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -223,15 +224,18 @@ footer {
     color: #111827;
 }
 
-/* Penyesuaian Jarak Antar Bagian di Dashboard */
 .dashboard-welcome {
     margin-bottom: 2.5rem;
     color: #333;
     font-size: 1rem;
 }
 
-/* Responsive untuk Grid Statistik */
+/* Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
