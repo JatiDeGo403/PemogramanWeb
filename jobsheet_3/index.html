@@ -3,49 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Beranda</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Sistem Penjualan | Beranda</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>SIMPUS-Mini</h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="buku/list.html">Daftar Buku</a></li>
-                <li><a href="buku/tambah.html">Tambah Buku</a></li>
-                <li><a href="anggota/list.html">Daftar Anggota</a></li>
-            </ul>
-        </nav>
+    <!-- Bagian Atas (Orange) -->
+    <header class="top-header">
+        <h1>Sistem Informasi Penjualan</h1>
+        <p>Web Pengelola Data Penjualan & Karyawan</p>
     </header>
 
-    <main>
-        <section>
-            <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
-            <p>Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-        </section>
+    <!-- Bagian Tengah (Kuning Keoranyean) -->
+    <nav class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="list.html">Data Barang</a>
+        <a href="list_2.html">Data Karyawan</a>
+        <a href="tambah_2.html">Tambah Karyawan</a>
+    </nav>
 
-        <section>
-            <h2>Ringkasan</h2>
-            <article>
-                <h3>Total Buku</h3>
-                <p>12</p>
-            </article>
-            <article>
-                <h3>Total Anggota</h3>
-                <p>8</p>
-            </article>
-            <article>
-                <h3>Sedang Dipinjam</h3>
-                <p>3</p>
-            </article>
-        </section>
+    <main>
+        <div class="card">
+            <!-- Bagian Welcome -->
+            <div class="card-title">Dashboard</div>
+            <div class="dashboard-welcome">
+                Selamat Datang di Web Pengelola Data Sistem Informasi Penjualan
+            </div>
+
+            <!-- Bagian Statistik -->
+            <div class="card-title">Statistik Penjualan</div>
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <h3>Total Barang</h3>
+                    <p>12</p>
+                </article>
+                <article class="stat-card">
+                    <h3>Total Karyawan</h3>
+                    <p>8</p>
+                </article>
+                <article class="stat-card">
+                    <h3>Transaksi Hari Ini</h3>
+                    <p>3</p>
+                </article>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3</p>
+        <p>&copy; 2026 Sistem Informasi Penjualan</p>
     </footer>
 </body>
 </html>

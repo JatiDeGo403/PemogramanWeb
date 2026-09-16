@@ -7,93 +7,81 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #2b2b2b;
-    background-color: #f5f6f8;
-    line-height: 1.5;
-}
-
-a {
-    color: #1d5b8a;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* ===== Header & Navbar (Flexbox) ===== */
-header {
-    background-color: #1d5b8a;
-    color: #fff;
-    padding: 1rem 1.5rem;
+    background-color: #f4f6f9;
+    color: #333;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header h1 {
-    font-size: 1.4rem;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.25rem;
-}
-
-header nav a {
-    color: #fff;
-    font-weight: 500;
-}
-
-/* ===== Main Layout ===== */
-main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-section {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-section h2 {
-    margin-bottom: 1rem;
-    color: #1d5b8a;
-}
-
-/* ===== Kartu Statistik (CSS Grid) ===== */
-main section:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-main section:nth-of-type(2) article {
-    background-color: #eef4fa;
-    border-radius: 8px;
-    padding: 1.25rem;
+/* ===== Bagian Atas (Header) - Warna Orange ===== */
+.top-header {
+    background-color: #FF8C00; 
+    color: #ffffff;
     text-align: center;
+    padding: 2rem 1rem;
 }
 
-main section:nth-of-type(2) article h3 {
-    font-size: 0.95rem;
-    color: #55677a;
+.top-header h1 {
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
-main section:nth-of-type(2) article p {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #1d5b8a;
+.top-header p {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* ===== Bagian Tengah (Navbar) - Warna Kuning Keoranyean ===== */
+.navbar {
+    background-color: #FFB300; 
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2.5rem;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Main Layout & Card ===== */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #1a2332; /* Garis tebal gelap seperti di gambar */
 }
 
 /* ===== Tabel ===== */
+.table-responsive {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -101,144 +89,156 @@ table {
 
 th, td {
     text-align: left;
-    padding: 0.65rem 0.75rem;
-    border-bottom: 1px solid #e2e6ea;
+    padding: 1rem;
+    border: 1px solid #d1d5db;
 }
 
-thead {
-    background-color: #1d5b8a;
-    color: #fff;
+th {
+    background-color: #202b3c;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f7f9fb;
+td {
+    color: #333;
+    font-size: 0.95rem;
 }
 
-tbody tr:hover {
-    background-color: #eef4fa;
+/* ===== Form (Sesuai Gambar) ===== */
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-td button {
-    padding: 0.35rem 0.7rem;
-    margin-right: 0.35rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.85rem;
-}
-
-td button:first-of-type {
-    background-color: #f0ad4e;
-    color: #fff;
-}
-
-td button:last-of-type {
-    background-color: #d9534f;
-    color: #fff;
-}
-
-/* ===== Form ===== */
-form p {
-    margin-bottom: 1rem;
-}
-
-form label {
+.form-group label {
     display: block;
-    margin-bottom: 0.35rem;
-    font-weight: 600;
-    color: #444;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
 }
 
-form input,
-form select {
+/* Input dan Textarea dibuat memanjang sesuai gambar */
+.form-group input,
+.form-group textarea {
     width: 100%;
-    max-width: 400px;
-    padding: 0.55rem 0.7rem;
-    border: 1px solid #cdd4da;
-    border-radius: 4px;
-    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #4f81bd; /* Warna border biru muda seperti di gambar */
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #fafbfc;
 }
 
-form button[type="submit"] {
-    background-color: #1d5b8a;
-    color: #fff;
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2b579a;
+    box-shadow: 0 0 0 2px rgba(43, 87, 154, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ===== Tombol (Sesuai Gambar) ===== */
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
     border: none;
-    padding: 0.6rem 1.5rem;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: bold;
     cursor: pointer;
+    color: #fff;
 }
 
-form button[type="submit"]:hover {
-    background-color: #164869;
+.btn-primary {
+    background-color: #0284c7; /* Biru terang seperti di gambar */
+}
+
+.btn-primary:hover {
+    background-color: #0369a1;
+}
+
+.btn-secondary {
+    background-color: #6b7280; /* Abu-abu seperti di gambar */
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
 }
 
 /* ===== Footer ===== */
 footer {
+    background-color: #202b3c;
+    color: #9ca3af;
     text-align: center;
-    padding: 1.25rem;
-    color: #7a8794;
+    padding: 1.5rem;
     font-size: 0.9rem;
+    margin-top: 3rem;
 }
 
-/* ===== Tabel Responsif ===== */
-.table-responsive {
-    overflow-x: auto;
-}
-
-/* ===== Hamburger Menu (checkbox hack) ===== */
-.nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    display: none;
-    font-size: 1.6rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* ===== Responsive Breakpoints ===== */
-
-/* Tablet ke bawah */
+/* Responsive */
 @media (max-width: 768px) {
-    main section:nth-of-type(2) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+/* ===== Dashboard Stats (Tambahan Baru) ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.stat-card {
+    background-color: #fafbfc; /* Latar belakang sangat terang */
+    border: 1px solid #e5e7eb; /* Border abu-abu tipis keliling */
+    border-left: 4px solid #0284c7; /* Border kiri biru tebal sesuai gambar */
+    border-radius: 4px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.stat-card h3 {
+    font-size: 0.85rem;
+    color: #1e3a8a; /* Biru gelap untuk judul stat */
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Penyesuaian Jarak Antar Bagian di Dashboard */
+.dashboard-welcome {
+    margin-bottom: 2.5rem;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Responsive untuk Grid Statistik */
+@media (max-width: 768px) {
+    .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
-    header {
-        position: relative;
-    }
-
-    .nav-toggle-label {
-        display: block;
-    }
-
-    header nav {
-        display: none;
-        width: 100%;
-        order: 3;
-        margin-top: 1rem;
-    }
-
-    .nav-toggle:checked ~ nav {
-        display: block;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    main section:nth-of-type(2) {
+    .stats-grid {
         grid-template-columns: 1fr;
-    }
-
-    form input,
-    form select {
-        max-width: 100%;
     }
 }
