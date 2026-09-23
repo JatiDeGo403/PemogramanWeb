@@ -1,0 +1,6 @@
+[
+    { "id": "KRY-001", "nama": "Ahmad Fauzi", "posisi": "Kasir Utama", "no_wa": "081234567890", "alamat": "Jl. Merdeka No. 10, Malang" },
+    { "id": "KRY-002", "nama": "Siti Rahmawati", "posisi": "Staf Gudang", "no_wa": "085678901234", "alamat": "Jl. Pahlawan No. 45, Malang" },
+    { "id": "KRY-003", "nama": "Budi Santoso", "posisi": "Supervisor", "no_wa": "082233445566", "alamat": "Jl. Kawi No. 2, Batu" },
+    { "id": "KRY-004", "nama": "Najwa Zahran", "posisi": "Customer Service", "no_wa": "089988776655", "alamat": "Jl. Bunga No. 87, Surabaya" }
+]

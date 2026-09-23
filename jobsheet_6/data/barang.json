@@ -1,0 +1,12 @@
+[
+    { "kode": "BRG-001", "nama": "Mouse Wireless Logi", "kategori": "Elektronik", "harga": 150000, "stok": 25 },
+    { "kode": "BRG-002", "nama": "Tas Ransel Anti Air", "kategori": "Aksesoris", "harga": 250000, "stok": 12 },
+    { "kode": "BRG-003", "nama": "Buku Tulis A5 (Isi 10)", "kategori": "ATK", "harga": 350000, "stok": 50 },
+    { "kode": "BRG-004", "nama": "Keyboard Mekanikal", "kategori": "Elektronik", "harga": 450000, "stok": 10 },
+    { "kode": "BRG-005", "nama": "Flashdisk 64GB", "kategori": "Elektronik", "harga": 85000, "stok": 30 },
+    { "kode": "BRG-006", "nama": "Kertas HVS A4", "kategori": "ATK", "harga": 55000, "stok": 100 },
+    { "kode": "BRG-007", "nama": "Mousepad Gaming", "kategori": "Aksesoris", "harga": 75000, "stok": 20 },
+    { "kode": "BRG-008", "nama": "Headset Bluetooth", "kategori": "Elektronik", "harga": 125000, "stok": 15 },
+    { "kode": "BRG-009", "nama": "Spidol Papan Tulis (Isi 12)", "kategori": "ATK", "harga": 60000, "stok": 40 },
+    { "kode": "BRG-010", "nama": "Kabel Data Type-C", "kategori": "Aksesoris", "harga": 25000, "stok": 60 }
+]

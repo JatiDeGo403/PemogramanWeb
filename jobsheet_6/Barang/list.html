@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistem Penjualan | Data Barang</title>
+    <link rel="stylesheet" href="../asset/css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <h1>Sistem Informasi Penjualan</h1>
+        <p>Manajemen Data Barang & Produk</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="../index.html">Beranda</a>
+        <a href="list.html">Data Barang</a>
+        <a href="tambah.html">Tambah Barang</a>
+        <a href="../karyawan/list.html">Data Karyawan</a>
+        <a href="../karyawan/tambah.html">Tambah Karyawan</a>
+    </nav>
+
+    <main>
+        <div class="card">
+            <div class="card-title">Daftar Barang Tersedia</div>
+            
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="search-input">Cari Nama Barang</label>
+                <input type="text" id="search-input" placeholder="Ketik nama barang..." style="max-width: 300px;">
+            </div>
+
+            <!-- Loading Indicator[cite: 14] -->
+            <p id="loading-indicator" style="display:none; color: #FF8C00; font-weight: bold; margin-bottom: 1rem;">Memuat data barang...</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>KODE BARANG</th>
+                            <th>NAMA BARANG</th>
+                            <th>KATEGORI</th>
+                            <th>HARGA (Rp)</th>
+                            <th>STOK</th>
+                            <th>AKSI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dikosongkan, diisi oleh barang.js[cite: 14] -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistem Informasi Penjualan</p>
+    </footer>
+    
+    <script src="../asset/js/app.js"></script>
+    <script src="../asset/js/barang.js"></script>
+</body>
+</html>
