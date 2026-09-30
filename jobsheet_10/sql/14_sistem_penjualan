@@ -1,0 +1,25 @@
+CREATE TABLE barang (
+    id SERIAL PRIMARY KEY,
+    kode VARCHAR(50) NOT NULL,
+    nama VARCHAR(150) NOT NULL,
+    kategori VARCHAR(50),
+    harga NUMERIC(15,2) NOT NULL,
+    stok INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE karyawan (
+    id SERIAL PRIMARY KEY,
+    id_karyawan VARCHAR(50) NOT NULL,
+    nama VARCHAR(150) NOT NULL,
+    posisi VARCHAR(100),
+    no_wa VARCHAR(20),
+    alamat TEXT
+);
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    nama VARCHAR(150) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) DEFAULT 'kasir'
+);
