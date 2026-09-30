@@ -1,23 +1,12 @@
-# Gunakan image PHP resmi yang sudah sepaket dengan server web Apache
 FROM php:8.2-apache
 
-# Install paket dependensi sistem operasi (Debian) yang dibutuhkan untuk PostgreSQL
-RUN apt-get update && apt-get install -y \
-    libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+# Install ekstensi PostgreSQL untuk PHP
+RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Install dan aktifkan ekstensi PDO PostgreSQL untuk PHP
-RUN docker-php-ext-install pdo pdo_pgsql pgsql
-
-# Aktifkan modul rewrite Apache (berguna jika nanti butuh URL rapi tanpa .php)
-RUN a2enmod rewrite
-
-# Copy seluruh file proyek jobsheet_10 Anda ke folder publik Apache di dalam container
+# Salin seluruh kode jobsheet_10 ke root web Apache
 COPY . /var/www/html/
 
-# Atur hak akses agar Apache bisa membaca file dengan benar
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+# Ubah konfigurasi port Apache agar membaca port dinamis dari Railway
+RUN sed -i 's/80/${PORT}/g' /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf
 
-# Ekspos port 80 untuk akses web
 EXPOSE 80
