@@ -1,6 +1,6 @@
 FROM php:8.2-apache
 
-# Install PostgreSQL extension
+# PostgreSQL
 RUN apt-get update && apt-get install -y libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql \
     && a2enmod rewrite \
@@ -12,7 +12,7 @@ COPY . /var/www/html/
 # Permission
 RUN chown -R www-data:www-data /var/www/html
 
-# Start script
+# Script startup
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
