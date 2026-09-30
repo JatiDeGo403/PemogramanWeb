@@ -1,8 +1,8 @@
 <?php
 $base = '../';
-require_once '../includes/auth.php'; // GUARD: Harus login
+require_once 'includes/auth.php'; // GUARD: Harus login
 $title = 'Sistem Penjualan | Tambah Karyawan';
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
 
 <div class="card">
@@ -43,4 +43,4 @@ include '../includes/header.php';
     </form>
 </div>
 
-<?php include '../PemogramanWeb/jobsheet_10/includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

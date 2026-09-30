@@ -1,7 +1,7 @@
 <?php
 $base = '../';
-require_once '../includes/auth.php'; // GUARD: Harus login
-require_once '../includes/koneksi.php';
+require_once 'includes/auth.php'; // GUARD: Harus login
+require_once 'includes/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $_SESSION['flash'] = 'Metode tidak diizinkan!';

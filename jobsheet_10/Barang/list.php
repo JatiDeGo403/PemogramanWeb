@@ -100,4 +100,4 @@ $data_barang = $stmtData->fetchAll(PDO::FETCH_ASSOC);
     <?php endif; ?>
 </div>
 
-<?php include '../PemogramanWeb/jobsheet_10/includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

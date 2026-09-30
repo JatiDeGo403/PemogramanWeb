@@ -1,9 +1,9 @@
 <?php
 $base = '../';
-require_once '../includes/auth.php'; // GUARD AUTH
+require_once 'includes/auth.php';
 $title = 'Sistem Penjualan | Edit Barang';
-include '../includes/header.php';
-require_once '../includes/koneksi.php';
+include 'includes/header.php';
+require_once 'includes/koneksi.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $stmt = $pdo->prepare("SELECT * FROM barang WHERE id = :id");
@@ -43,4 +43,4 @@ if (!$brg) {
         </div>
     </form>
 </div>
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

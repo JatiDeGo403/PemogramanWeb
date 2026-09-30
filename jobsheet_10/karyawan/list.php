@@ -1,9 +1,9 @@
 <?php
 $base = '../'; 
-require_once '../includes/auth.php'; // GUARD AUTH
+require_once 'includes/auth.php'; // GUARD AUTH
 $title = 'Sistem Penjualan | Data Karyawan';
-include '../includes/header.php';
-require_once '../includes/koneksi.php';
+include 'includes/header.php';
+require_once 'includes/koneksi.php';
 
 $limit = 5; 
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
@@ -67,4 +67,4 @@ $data_karyawan = $stmtData->fetchAll(PDO::FETCH_ASSOC);
         </table>
     </div>
 </div>
-<?php include '../PemogramanWeb/jobsheet_10/includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

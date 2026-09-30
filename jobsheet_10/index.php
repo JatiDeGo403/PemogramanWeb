@@ -40,4 +40,4 @@ $totalKaryawan = $stmtKaryawan->fetchColumn();
     </div>
 </div>
 
-<?php include '../PemogramanWeb/jobsheet_10/includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

@@ -25,7 +25,7 @@ $title = isset($title) ? $title : 'Sistem Penjualan';
         
         <?php if(isset($_SESSION['user_id'])): ?>
             <!-- Muncul jika sudah login -->
-            <a href="<?= $base ?>Barang/tambah.php">Tambah Barang</a>
+            <a href="<?= $base ?>../">Tambah Barang</a>
             <a href="<?= $base ?>karyawan/list.php">Data Karyawan</a>
             <a href="<?= $base ?>karyawan/tambah.php">Tambah Karyawan</a>
             <a href="<?= $base ?>auth/logout.php" style="background-color: #d35400; color: #fff; padding: 2px 10px; border-radius: 4px;">Logout (<?= htmlspecialchars($_SESSION['user_nama']) ?>)</a>

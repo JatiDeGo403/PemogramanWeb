@@ -1,9 +1,9 @@
 <?php
 $base = '../';
-require_once '../includes/auth.php'; // GUARD: Harus login
+require_once 'includes/auth.php'; // GUARD: Harus login
 $title = 'Sistem Penjualan | Edit Karyawan';
-include '../includes/header.php';
-require_once '../includes/koneksi.php';
+include 'includes/header.php';
+require_once 'includes/koneksi.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $stmt = $pdo->prepare("SELECT * FROM karyawan WHERE id = :id");
@@ -57,4 +57,4 @@ if (!$kry) {
     </form>
 </div>
 
-<?php include '../PemogramanWeb/jobsheet_10/includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

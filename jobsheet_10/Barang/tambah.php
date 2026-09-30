@@ -1,8 +1,8 @@
 <?php
 $base = '../';
-require_once '../includes/auth.php'; // GUARD AUTH
+require_once 'includes/auth.php'; // GUARD AUTH
 $title = 'Sistem Penjualan | Tambah Barang';
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
 <!-- Isi form sama dengan file Barang/tambah.php di tahap sebelumnya, pastikan <form id="form-data" action="proses_tambah.php" method="POST" novalidate> -->
 <div class="card">
@@ -31,4 +31,4 @@ include '../includes/header.php';
         </div>
     </form>
 </div>
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

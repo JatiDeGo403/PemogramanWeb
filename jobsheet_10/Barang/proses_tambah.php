@@ -1,7 +1,7 @@
 <?php
 $base = '../';
-require_once '../includes/auth.php'; // GUARD AUTH
-require_once '../includes/koneksi.php';
+require_once 'includes/auth.php'; // GUARD AUTH
+require_once 'includes/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $kode = trim($_POST['kode_barang'] ?? '');
