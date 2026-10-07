@@ -1,7 +1,7 @@
 <?php
 $base = '../';
 $title = 'Sistem Penjualan | Register';
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
 
 <div class="card" style="max-width: 500px; margin: 2rem auto;">
@@ -35,4 +35,4 @@ include '../includes/header.php';
     </form>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>
