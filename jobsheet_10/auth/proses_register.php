@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/koneksi.php';
+require_once '../includes/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama = trim($_POST['nama'] ?? '');
