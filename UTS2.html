@@ -1,0 +1,287 @@
+<!-- Agus tidur besok ngelawan dewa-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masih copy paste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body{
+            background: radial-gradient(circle at 50% 50%, #202020 0%, #0a0a0a 100%);
+            color: #ffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .logo{
+            font-size: 20px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 2px;
+        }
+
+        .nav_links{
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav_links a{
+            color: #cccc;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        .nav_links a:hover{
+            color: #ffff;
+        }
+
+        .btn_login{
+            background-color: #2a2a2a;
+            color: #ffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hero{
+            display: flex;
+            flex: 1;
+            padding: 40px 50px;
+            position: relative;
+        }
+
+        .hero-left{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 50px;
+            z-index: 10;
+        }
+
+        .hero-left h1{
+            font-size: 65px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-left p{
+            font-size: 22px;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+        }
+
+        .input-group{
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .input-group input{
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .btn-start {
+            background-color: #4361ee;
+            color: white;
+            border: none;
+            padding: 0 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .upload-logo{
+            color: #cccc;
+            text-decoration: none;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .hero-right{
+            flex: 1.2;
+            position: relative;
+        }
+
+        .grid-bg{
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 300px;
+            height: 400px;
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px)
+            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            z-index: 1;
+        }
+
+        .card-top{
+            position: absolute;
+            top: 5%;
+            right: 0%;
+            width: 480px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            z-index: 2;
+        }
+
+        .card-bottom{
+            position: absolute;
+            top: 35%;
+            right: 25px;
+            width: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            z-index: 3;
+        }
+
+        .card-side{
+            position: absolute;
+            left: 60%;
+            right: 40px;
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: rgba(0,0,0,0.8);
+            z-index: 5;
+        }
+
+        .card-top, .card-bottom img{
+            width: 100%;
+            display: block;
+        }
+
+        .color-pallete{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            background-color: white;
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction:column;
+            gap: 15px;
+            z-index: 4;
+        }
+
+        .color-dot{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .font-pallete{
+            position: absolute;
+            bottom: -50px;
+            right: 10%;
+            display: flex;
+            gap: 15px;
+            z-index: 4;
+        }
+
+        .font-dot{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .scroll-down{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            color: #ffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-brands fa-dyalog"></i> uts
+        </div>
+        <nav>
+            <a href="#">a <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#">a <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#">a <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#">a <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#">a <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#">a <i class="fa-solid fa-chevron-down"></i></a>
+        </nav>
+        <a href="#" class="btn_login"> log in</a>
+    </header>
+    <main class="hero">
+        <div class="hero-left">
+            <p></p>
+            <p> oke life just begun</p>
+            <div class="input-group">
+            </div>
+
+            <a href="#" class="upload-logo">
+                <i class="fa-solid fa-cloud-arrow-up"></i> 
+            </a>
+        </div>
+            
+            <div class="card-side">
+                <img src="https://imgs.search.brave.com/O2rqOLRkwGskrZ64VYYxKMCcHE5SlEIHvE45BPxjzK0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wZXJm/ZWN0by1sYW5kc2Nh/cGUtdmlsbGFnZS0y/NDg5NTY4NDQuanBn" alt="test">
+            </div>
+
+            <div class="font-pallete">
+                <div class="font-dot" style="font-weight: 300;"> Aa</div>
+                <div class="font-dot" style="font-weight: 600;"> Aa</div>
+                <div class="font-dot" style="font-weight: 800;"> Aa</div>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <i class="fa-solid fa-circle-down"></i>
+        </div>
+    </main>
+</body>
+</html>

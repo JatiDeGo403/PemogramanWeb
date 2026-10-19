@@ -1,7 +1,7 @@
 <?php
 $base = ''; 
 $title = 'Sistem Penjualan | Beranda';
-include 'includes/header.php';
+include '../Includes/header.php';
 ?>
 
 <div class="card">
@@ -29,5 +29,5 @@ include 'includes/header.php';
 </div>
 
 <?php
-include 'includes/footer.php';
+include '../Includes/footer.php';
 ?>

@@ -68,7 +68,7 @@ function initValidasiForm() {
     if (!form) return;
     form.addEventListener("submit", function (e) {
         let valid = true;
-        const fieldWajib = form.querySelectorAll("[name='kode_barang'], [name='nama_barang'], [name='id_karyawan'], [name='nama_lengkap']");
+         const fieldWajib = form.querySelectorAll("[name='kode_barang'], [name='nama_barang'], [name='id_karyawan'], [name='nama_karyawan']");
         
         fieldWajib.forEach(function(input) {
             if (input.value.trim() === "") {
@@ -79,7 +79,7 @@ function initValidasiForm() {
             }
         });
 
-        const harga = form.querySelector("[name='harga']");
+        const harga = form.querySelector("[name='harga_jual']");
         if (harga && (isNaN(parseInt(harga.value, 10)) || parseInt(harga.value, 10) < 0)) {
             tampilkanError(harga, "Harga tidak boleh bernilai negatif.");
             valid = false;

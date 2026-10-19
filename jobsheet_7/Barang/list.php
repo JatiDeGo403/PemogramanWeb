@@ -1,7 +1,7 @@
 <?php
 $base = '../'; // Karena masuk 1 folder
 $title = 'Sistem Penjualan | Data Barang';
-include '../includes/header.php';
+include '../Includles/header.php';
 
 // Inisialisasi array session jika kosong
 if (!isset($_SESSION['barang'])) {
@@ -60,4 +60,4 @@ if (!isset($_SESSION['barang'])) {
     </div>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include '../Includes/footer.php'; ?>

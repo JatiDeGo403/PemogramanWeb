@@ -1,7 +1,7 @@
 <?php
 $base = '../'; 
 $title = 'Sistem Penjualan | Data Karyawan';
-include '../includes/header.php';
+include '../Includes/header.php';
 
 if (!isset($_SESSION['karyawan'])) {
     $_SESSION['karyawan'] = [];
@@ -58,4 +58,4 @@ if (!isset($_SESSION['karyawan'])) {
     </div>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include '../Includes/footer.php'; ?>

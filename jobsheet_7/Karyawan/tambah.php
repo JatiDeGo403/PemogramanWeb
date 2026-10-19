@@ -1,7 +1,7 @@
 <?php
 $base = '../';
 $title = 'Sistem Penjualan | Tambah Karyawan';
-include '../includes/header.php';
+include '../Includes/header.php';
 ?>
 
 <div class="card">
@@ -42,4 +42,4 @@ include '../includes/header.php';
     </form>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include '../Includes/footer.php'; ?>

@@ -3,53 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Tambah Anggota</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Sistem Informasi Penjualan | Tambah Barang</title>
+    <!-- Pastikan path CSS ini benar sesuai struktur folder Anda -->
+    <link rel="stylesheet" href="../asset/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>SIMPUS-Mini</h1>
-        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Beranda</a></li>
-                <li><a href="../buku/list.html">Daftar Buku</a></li>
-                <li><a href="list.html">Daftar Anggota</a></li>
-                <li><a href="tambah.html">Tambah Anggota</a></li>
-            </ul>
-        </nav>
+    <!-- Header menggunakan warna oranye dari CSS -->
+    <header class="top-header">
+        <h1>Sistem Informasi Penjualan</h1>
+        <p>Manajemen Data Barang & Produk</p>
     </header>
 
+    <!-- Navigasi disesuaikan untuk menu toko/penjualan -->
+    <nav class="navbar">
+        <a href="../index.html">Beranda</a>
+        <a href="list.html">Data Barang</a>
+        <a href="tambah.html">Tambah Barang</a>
+        <a href="../karyawan/list.html">Data Karyawan</a>
+        <a href="../karyawan/tambah.html">Tambah Karyawan</a>
+    </nav>
+
     <main>
-        <section>
-            <h2>Tambah Anggota</h2>
-            <form id="form-tambah">
-                <p>
-                    <label for="nama">Nama</label><br>
-                    <input type="text" id="nama" name="nama" required>
-                </p>
-                <p>
-                    <label for="no_anggota">No. Anggota</label><br>
-                    <input type="text" id="no_anggota" name="no_anggota" required>
-                </p>
-                <p>
-                    <label for="alamat">Alamat</label><br>
-                    <input type="text" id="alamat" name="alamat">
-                </p>
-                <p>
-                    <label for="no_hp">No. HP</label><br>
-                    <input type="text" id="no_hp" name="no_hp">
-                </p>
-                <p>
-                    <button type="submit">Simpan</button>
-                </p>
+        <!-- Membungkus form dengan class card -->
+        <section class="card">
+            <h2 class="card-title">Tambah Data Barang Baru</h2>
+            
+            <form id="form-tambah-barang">
+                <div class="form-group">
+                    <label for="kode_barang">Kode Barang</label>
+                    <input type="text" id="kode_barang" name="kode_barang" placeholder="Contoh: BRG-001" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nama_barang">Nama Barang</label>
+                    <input type="text" id="nama_barang" name="nama_barang" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <!-- Menggunakan tag select untuk pilihan kategori, sudah diatur di CSS -->
+                    <select id="kategori" name="kategori" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="makanan">Makanan</option>
+                        <option value="minuman">Minuman</option>
+                        <option value="pakaian">Pakaian</option>
+                        <option value="elektronik">Elektronik</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="harga_jual">Harga Jual (Rp)</label>
+                    <input type="number" id="harga_jual" name="harga_jual" placeholder="Contoh: 15000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="stok">Stok Awal</label>
+                    <input type="number" id="stok" name="stok" placeholder="Jumlah barang" required>
+                </div>
+                
+                <div class="button-group">
+                    <!-- Tombol utama (oranye) untuk simpan, tombol sekunder (abu) untuk reset -->
+                    <button type="submit" class="btn btn-primary">Simpan Barang</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
+                </div>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 6</p>
+        <p>&copy; 2026 Sistem Informasi Penjualan &mdash; Jobsheet 6</p>
     </footer>
-    <script src="../assets/js/app.js"></script>
+    
+    <script src="../asset/css/js/app.js"></script>
+    <script src="../asset/css/js/barang.js"></script>
 </body>
 </html>
